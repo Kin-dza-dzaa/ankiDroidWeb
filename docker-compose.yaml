@@ -1,0 +1,64 @@
+version: '0.1'
+services:
+  user_api:
+    build: ./user_api/
+    restart: always
+    ports:
+      - "8001:8001"
+    depends_on:
+      - userpostgres
+    networks:
+      - user_service
+    command: ["./wait-for-it.sh", "--timeout=30", "userpostgres:5432", "--", "/usr/src/app/app"]      
+  userpostgres:
+    image: postgres
+    restart: always
+    expose:
+      - 5432
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+    volumes:
+      - ./dbuser:/var/lib/postgresql/data
+      - ./user_api/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
+    networks:
+      - user_service
+  word_api:
+    build: ./word_api/
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - wordpostgres
+    networks:
+      - word_service
+    command: ["./wait-for-it.sh", "--timeout=30", "wordpostgres:5432", "--", "/usr/src/app/app"]      
+  wordpostgres:
+    image: postgres
+    restart: always
+    expose:
+      - 5432
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+    volumes:
+      - ./dbword:/var/lib/postgresql/data
+      - ./word_api/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
+    networks:
+      - word_service
+  react_spa:
+    build: ./spa_build/
+    restart: always
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - user_api
+      - word_api
+    command: ["serve", "-s", "."]
+networks:
+  user_service:
+    driver: bridge
+    name: user_api
+  word_service:
+    driver: bridge
+    name: word_api
