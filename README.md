@@ -35,10 +35,10 @@ Demo of my app
 
 ### Creating a collection
 
-![](https://github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/create_collection.gif)
+![](https://raw.github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/create_collection.gif)
 
 
 ### Learning a collection
 
 
-![](https://github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/learn_collection.gif)
+![](https://raw.github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/learn_collection.gif)
