@@ -20,7 +20,7 @@ services:
       - POSTGRES_PASSWORD=12345
     volumes:
       - ./dbuser:/var/lib/postgresql/data
-      - ./user_api/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
+      - ./userApi/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
     networks:
       - user_service
   word_api:
@@ -43,7 +43,7 @@ services:
       - POSTGRES_PASSWORD=12345
     volumes:
       - ./dbword:/var/lib/postgresql/data
-      - ./word_api/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
+      - ./wordApi/migrations/up.sql:/docker-entrypoint-initdb.d/up.sql
     networks:
       - word_service
   react_spa:
