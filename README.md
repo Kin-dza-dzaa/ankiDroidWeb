@@ -5,7 +5,7 @@ Web analog of ankiDroid application. Application allow you to create collections
 The app uses [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) for learning new words.
 Applicaton will track down all of your progress on each collection.
 
-####I used Golang for building 2 restfull api and React for SPA. 
+I used Golang for building 2 restfull api and React for SPA. 
 
 Installation
 ------------
