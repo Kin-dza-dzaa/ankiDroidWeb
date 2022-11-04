@@ -41,4 +41,4 @@ Demo of my app
 ### Learning a collection
 
 
-![](https://raw.github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/learn_collection.gif)
+![](https://raw.github.com/Kin-dza-dzaa/ankiDroidWeb/main/spa_build/learn_words.gif)
