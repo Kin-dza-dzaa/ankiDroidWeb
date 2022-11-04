@@ -1,7 +1,7 @@
 version: '0.1'
 services:
   user_api:
-    build: ./user_api/
+    build: ./userApi/
     restart: always
     ports:
       - "8001:8001"
@@ -24,7 +24,7 @@ services:
     networks:
       - user_service
   word_api:
-    build: ./word_api/
+    build: ./wordApi/
     restart: always
     ports:
       - "8000:8000"
