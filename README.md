@@ -15,6 +15,7 @@ Clone this repo:
 	git clone https://github.com/Kin-dza-dzaa/ankiDroidWeb
 
 Pull down all submodules:
+	
 	cd ankiDroidWeb
 	git submodule init
 	git submodule update
