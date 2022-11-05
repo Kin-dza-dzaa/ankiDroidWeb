@@ -9,7 +9,7 @@ services:
       - userpostgres
     networks:
       - user_service
-    command: ["./wait-for-it.sh", "--timeout=30", "userpostgres:5432", "--", "/usr/src/app/app"]      
+    command: ["/usr/src/app/app"]      
   userpostgres:
     image: postgres
     restart: always
@@ -32,7 +32,7 @@ services:
       - wordpostgres
     networks:
       - word_service
-    command: ["./wait-for-it.sh", "--timeout=30", "wordpostgres:5432", "--", "/usr/src/app/app"]      
+    command: ["/usr/src/app/app"]      
   wordpostgres:
     image: postgres
     restart: always
