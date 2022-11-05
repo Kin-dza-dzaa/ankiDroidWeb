@@ -14,23 +14,17 @@ Clone this repo:
 	
 	git clone https://github.com/Kin-dza-dzaa/ankiDroidWeb
 
-Pull down all submodules:
-	
-	cd ankiDroidWeb
-	git submodule init
-	git submodule update
-
 And run:
 	
 	docker compose up -d
 
-It creates 5 containers and 4 images. Those images need around 400 mb of space.
-Then open 
+It creates 5 containers and 4 images. Those images need around 600 mb of space.
+Then open:
 	
 	localhost:3000
 
 
-Demo of my app
+Demo of the app
 ------------
 
 ### Creating a collection
