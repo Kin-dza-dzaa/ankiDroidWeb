@@ -1,6 +1,0 @@
-[submodule "wordApi"]
-	path = wordApi
-	url = https://github.com/Kin-dza-dzaa/wordApi
-[submodule "userApi"]
-	path = userApi
-	url = https://github.com/Kin-dza-dzaa/userApi
